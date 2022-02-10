@@ -4,7 +4,7 @@
 #include "MainCharacter.h"
 
 #if PLATFORM_IOS || PLATFORM_ANDROID
-#include "src/pugixml.hpp"
+#include "ThirdParty/pugi/src/pugixml.hpp"
 # endif
 
 // Sets default values
