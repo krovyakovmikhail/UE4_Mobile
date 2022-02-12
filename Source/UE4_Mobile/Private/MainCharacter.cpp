@@ -20,15 +20,15 @@ void AMainCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-#if PLATFORM_IOS || PLATFORM_ANDROID
 
-	pugi::xml_document doc;
 
-	pugi::xml_parse_result result = doc.load_file("tree.xml");
+	//pugi::xml_document doc;
 
-	std::cout << "Load result: " << result.description() << ", mesh name: " << doc.child("mesh").attribute("name").value() << std::endl;
+	//pugi::xml_parse_result result = doc.load_file("tree.xml");
 
-# endif
+	//std::cout << "Load result: " << result.description() << ", mesh name: " << doc.child("mesh").attribute("name").value() << std::endl;
+
+
 	
 }
 
