@@ -13,7 +13,15 @@ public class UE4_Mobile : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
 		if (Target.Platform == UnrealTargetPlatform.Android)
+		{
 			PublicAdditionalLibraries.AddRange(new string[] { System.IO.Path.Combine(ModuleDirectory, "ThirdParty", "pugi", "pugixml.lib") });
+			PrivateDependencyModuleNames.AddRange(new string[] { "Launch", "ApplicationCore" });
+			PrivateIncludePaths.AddRange(new string[] { "/Source/Runtime/Launch/Private" });
+			string pluginPath = Utils.MakePathRelativeTo(ModuleDirectory, Target.RelativeEnginePath);
+			AdditionalPropertiesForReceipt.Add(new ReceiptProperty("PhotoLibrary", System.IO.Path.Combine(pluginPath, "PhotoLibrary_APL.xml")));
+
+		}
+			
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
