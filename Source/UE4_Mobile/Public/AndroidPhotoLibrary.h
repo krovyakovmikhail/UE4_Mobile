@@ -14,7 +14,9 @@ class PHOTOLIBRARY_API AndroidPhotoLibrary : public IPhotoLibrary
 	static struct _JNIEnv *ENV;
 #endif
 
-#define DECLARE_JAVA_METHOD(name) 
+#define DECLARE_JAVA_METHOD(name)
+
+	
 static jmethodID name = NULL;
 
 	DECLARE_JAVA_METHOD(AndroidThunkJava_OpenGallery);	// Here goes the name of the method in the Java side
